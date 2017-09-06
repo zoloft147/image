@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Image Quiz</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+    </head>
+    <body class="container">
+        <h1>Hello World</h1>
+
+        <!-- (1) FRONT INTERFACE STAGE -->
+        <div class="front row">
+            <div class="button-group front">
+                <div class="col-sm-6 button-container">
+                    <button type="button" id="game-mode">Game</button>
+                </div>
+                <div class="col-sm-6 button-container">
+                    <button type="button" id="edit-mode">Edit</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row front">
+                <div class="col-sm-12" style="height: 30px"></div>
+        </div>
+
+        <div class="front">
+            <label for="amount">Image dimensions: (100px increments):</label>
+            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        </div>
+        
+        <div class="row front">
+            <div class="col-sm-12" style="height: 30px"></div>
+        </div>
+
+        <div class="front" id="slider"></div>
+
+        <div class="row front">
+                <div class="col-sm-12" style="height: 30px"></div>
+        </div>  
+        
+        <img src="sample/cat.jpg" alt="sample" class="center-block front" id="sample">
+
+
+        <!-- (2) OPTIONS FOLLOWED AFTER FRONT -->
+        <!-- THIS CAN BE OPTIONS FOR GAME OR EDIT -->
+        <div class="options hidden">
+            <div class="button-group options">
+                
+            </div>
+        </div>
+
+        <!-- (3) IMAGE CONTAINER FOR EDIT AND GAME MODE -->
+        <!-- FOLLOW AFTER FRONT AND TOGETHER WITH EITHER GAME OR EDIT MODE --> 
+        <div class="hidden edit game" id="image">
+        </div>
+
+        <!-- (4) BUTTONS FOR EDIT MODE -->
+        <div class="row button-group edit game hidden">
+            <div class="col-sm-4 button-container">
+                <button type="button"  id="prev" class="game edit hidden">Previous</button>
+            </div>
+            <div class="col-sm-4 button-container">
+                <button type="button"  id="finish" class="edit hidden">Finish</button>
+            </div>
+            <div class="col-sm-4 button-container">
+                <button type="button" id="next" class="game edit hidden">Next</button>
+            </div>
+        </div>
+
+        <!-- (4) BUTTONS FOR EDIT MODE -->
+        <div class="row button-group edit hidden">
+            <div class="col-sm-2 button-container">
+                <button type="button"  id="add">Add</button>
+            </div>
+            <div class="col-sm-2 button-container">
+                <button type="button"  id="delete">Delete</button>
+            </div>
+            <div class="col-sm-2 button-container">
+                <button type="button" id="edit-pos">Edit</button>
+            </div>
+            <div class="col-sm-2 button-container">
+                <button type="button" id="edit-answer">Edit Answer</button>
+            </div>
+            <div class="col-sm-2 button-container">
+                <button type="button" id="delete-image">Delete Image</button>
+            </div>
+        </div>
+
+        <div class="row edit game hidden">
+            <div class="col-sm-12" style="height: 30px"></div>
+        </div>  
+
+
+        <div class="row form-group input-group-sm edit game hidden">
+            <div class="col-sm-2"></div>
+            <button type="button" style="height:30px" class="btn btn-primary btn-sm col-sm-1" id="fast-backward"><span class="glyphicon glyphicon-fast-backward"></span></button>            
+            <div class="col-sm-1"></div>
+            <label for="page" class="col-sm-1">Page:</label>
+            <input type="number" class="col-sm-1" id="page">
+            <div class="col-sm-1"></div>
+            <button type="button" style="height:30px" class="btn btn-primary btn-sm col-sm-1" id="jump">Jump</button>
+            <div class="col-sm-1"></div>
+            <button type="button" style="height:30px" class="btn btn-primary btn-sm col-sm-1" id="fast-forward"><span class="glyphicon glyphicon-fast-forward"></span></button>
+            <div class="col-sm-2"></div>
+        </div>
+
+
+
+    </body>
+</html>

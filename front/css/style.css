@@ -1,0 +1,54 @@
+h1{
+    text-align: center; 
+}
+
+#image{
+    background-size: 100% 100%;
+    width: 1280px;
+    height: 720px;
+    margin: 0 auto;
+    position: relative;
+}
+
+button {
+    display: block;
+    width: 100px;
+    height: 50px;
+    margin: auto;
+}
+
+.button-group {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.square-border {
+    position: absolute;
+    opacity: 0.5;
+    border-style: dashed;
+    border-color: red;
+}
+
+.square {
+    -webkit-user-drag: none;
+    position: absolute;
+    background-color: black;
+}
+
+.square:hover {
+    cursor: -webkit-grab;
+    border: 5px solid yellow;
+}
+
+.square.wrong:hover {
+    cursor: -webkit-grab;
+    border: 5px dashed #E80695;
+}
+
+.square.correct:hover {
+    cursor: -webkit-grab;
+    border: 5px dashed #04F746;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/jquery.min.js"></script>
+        <script>
+            // var data = `[{"name":"asset/bird/bird1.jpeg","rectangles":[{"first":{"x":0,"y":0},"second":{"x":0,"y":0},"answer":"asdsa","imageDimensions":{"width":0,"height":0}},{"first":{"x":23,"y":0},"second":{"x":32,"y":0},"answer":"asdsa","imageDimensions":{"width":0,"height":0}},{"first":{"x":146.5,"y":171.39999389648438},"second":{"x":223.5,"y":209.39999389648438},"answer":"this sucks","imageDimensions":{"width":800,"height":800}},{"first":{"x":357.5,"y":142.39999389648438},"second":{"x":454.5,"y":187.39999389648438},"answer":"this sucks","imageDimensions":{"width":800,"height":800}}]},{"name":"asset/bird/bird2.jpeg","rectangles":[{"first":{"x":0,"y":400},"second":{"x":0,"y":400},"answer":"adasd","imageDimensions":{"width":0,"height":0}},{"first":{"x":240.5,"y":341.3999938964844},"second":{"x":316.5,"y":371.3999938964844},"answer":"this sucks","imageDimensions":{"width":800,"height":800}},{"first":{"x":413.5,"y":202.39999389648438},"second":{"x":496.5,"y":225.39999389648438},"answer":"this sucks","imageDimensions":{"width":800,"height":800}}]}]`
+            // $.ajax({
+            //     method: "PUT",
+            //     url: 'http://localhost:9000/existed/dataEntry',
+            //     data: 'data=' + data,
+            //     statusCode: {
+            //         200: (data) => {
+            //             $("h1").text(data);
+            //         }
+            //     }
+            // });
+
+            // $.ajax({
+            //     method: "GET",
+            //     url: "http://localhost:9000/new/superPath",
+            //     statusCode: {
+            //         200: (data) => {
+            //             $("h1").text(data);
+            //             alert("Succeed");
+            //         }
+            //     }
+            // });
+
+            // $.ajax({
+            //     method: "GET",
+            //     url: "http://localhost:9000/existed/retrieveImage",
+            //     data: "dir=" + JSON.stringify(["asset/iosBooks"]),
+            //     statusCode: {
+            //         200: (data) => {
+            //             $("h1").text(data);
+            //             alert("Succeed");
+            //         }
+            //     }
+            // });
+
+            $.ajax({
+                method: "DELETE",
+                url: "http://localhost:9000/file",
+                data: "dir=" + JSON.stringify(["asset/1- RY SciFnd DNA structure_replication/Slide04.png"]),
+                statusCode: {
+                    200: (data) => {
+                        $("h1").text(data);
+                        alert("Succeed");
+                    }
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <h1></h1>
+        <div id="image_container">
+        </div>
+    </body>
+</html>
